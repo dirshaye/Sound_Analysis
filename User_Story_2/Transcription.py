@@ -11,7 +11,7 @@ def preprocess_audio(input_path, output_path, target_sample_rate=16000):
     Preprocesses an audio file by converting it to mono and resampling to the target sample rate.
     """
     # Load the audio file
-    audio = AudioSegment.from_file(input_path)
+    audio = AudioSegment.from_file(input_path) 
 
     # Convert to mono
     audio = audio.set_channels(1)
