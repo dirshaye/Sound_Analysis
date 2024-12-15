@@ -11,7 +11,7 @@ def preprocess_audio(input_path, output_path, target_sample_rate=16000):
     Preprocesses an audio file by converting it to mono and resampling to the target sample rate.
     """
     # Load the audio file
-    audio = AudioSegment.from_file(input_path)
+    audio = AudioSegment.from_file(input_path) 
 
     # Convert to mono
     audio = audio.set_channels(1)
@@ -20,7 +20,7 @@ def preprocess_audio(input_path, output_path, target_sample_rate=16000):
     audio = audio.set_frame_rate(target_sample_rate)
 
     # Export the preprocessed audio
-    audio.export(output_path, format="wav")
+    audio.export(output_path, format="wav") 
     return output_path
 
 def transcribe_audio(file_path, output_file="Transcriptions/transcription.txt"):
